@@ -1,0 +1,19 @@
+admin account (LOG IN):
+username: library
+password: library
+
+font: new times roman 
+font size: 16
+color: 
+black matte [51,51,51]
+light blue [147,189,252]
+text field color [246,245,245]
+yellow = #FFC107
+blue = [41,182,246]
+red = #FF5252
+
+JOIN query bbok: 
+            pst = conn.prepareStatement("SELECT bb.id, bb.book_name, cc.category_name, aa.author_name, pp.publisher_name, bb.contents, bb.no_of_page, bb.edition FROM book bb "
+                    + "LEFT JOIN category cc ON bb.category = cc.id "
+                    + "LEFT JOIN author aa ON bb.author = aa.id "
+                    + "LEFT JOIN publisher pp ON bb.publisher = pp.id");
